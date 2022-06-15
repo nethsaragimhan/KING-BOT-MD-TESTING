@@ -1,18 +1,12 @@
 {
-    "name": "Aquabot - MD",
-    "description": "AQUABOT  - Makes it easy and fun to use Whatsapp.",
-    "logo": "https://i.ibb.co/V9jYrQC/aqua-md.jpg",
-    "keywords": ["whatsapp", "userbot", "aqua", "bot", "ai" , "MD" ],
-    "repository": "https://github.com/sanuwaofficial/AQUABOT-MD",
-    "website":   "https://aquabot.ga/",
-    "success_url": "https://aquabot.ga",
+    "name": "KING-BOT-MD V1",
+    "description": "KING BOT  - Makes it easy and fun to use Whatsapp.",
+    "logo": "https://telegra.ph/file/24b9b8507613125d34bd1.jpg",
+    "keywords": ["whatsapp", "userbot", "KING", "bot", "ai" , "MD" ],
+    "repository": "https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD",
     "stack": "container",
      "env": {
-            "AQUA_SESSION": {
-            "description": "",
-            "required": true
-             },
-       
+
             "AUTO_REACT": {
             "description": "",
             "value": "false" ,
