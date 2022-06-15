@@ -13,7 +13,7 @@
       },
       "ALIVE_LOGO": {
             "description": "",
-            "value": "https://i.ibb.co/V9jYrQC/aqua-md.jpg" ,
+            "value": "https://telegra.ph/file/24b9b8507613125d34bd1.jpg" ,
             "required": true
       },
       "DEPLOYER": {
@@ -76,7 +76,25 @@
     "addons": [{
       "plan": "heroku-postgresql"
     }],
-    "buildpacks": [{
-      "url": "heroku-community/apt"
-      }]
+    "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
   }
