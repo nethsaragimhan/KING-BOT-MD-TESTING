@@ -1,27 +1,65 @@
 {
-  "name": "Gojo-Satoru",
-  "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/nexusNw/Gojo-Satoru",
-  "logo": "https://telegra.ph/file/4c2c0174e86ac3bac2ba8.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-    }
-  ],
-   "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
-}
+    "name": "[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] - MD",
+    "description": "[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]  - Makes it easy and fun to use Whatsapp.",
+    "logo": "",
+    "keywords": ["whatsapp", "userbot", "king", "bot", "ai" , "MD" ],
+    "repository": "https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD",
+    "stack": "container",
+     "env": {
+
+
+      "ALIVE_MESSAGE": {
+            "description": "",
+            "value": "default", 
+            "required": true
+      },
+      "ALIVE_LOGO": {
+            "description": "",
+            "value": "https://telegra.ph/file/24b9b8507613125d34bd1.jpg" ,
+            "required": true
+      },
+      "DEPLOYER": {
+            "description": "",
+            "value": "AQUA USER" ,
+            "required": true
+      },
+          "WORK_TYPE": {
+            "description": "",
+            "value": "public" ,
+            "required": true
+      },
+         "SUDO": {
+            "description": "",
+            "value": "" ,
+            "required": false
+      },
+         "LANGUAGE": {
+            "description": "",
+            "value": "EN" ,
+            "required": true
+      },
+         "HEROKU": {
+            "description": "",
+            "value": "true" ,
+            "required": true
+      },
+         "HEROKU_API_KEY": {
+            "description": "",
+            "value": "" ,
+            "required": true
+      },
+         "HEROKU_APP_NAME": {
+            "description": "",
+            "value": "" ,
+            "required": true
+      },
+            }
+        
+     },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
