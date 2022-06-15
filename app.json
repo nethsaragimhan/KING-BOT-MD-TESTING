@@ -4,12 +4,7 @@
   "repository": "https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD",
   "logo": "https://telegra.ph/file/24b9b8507613125d34bd1.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    "stack": "container",
-     "env": {
+       "env": {
             "AQUA_SESSION": {
             "description": "",
             "required": true
@@ -175,8 +170,15 @@
             "description": "",
             "value": "default" ,
             "required": true
-      }
       },
+      }
+      
+      "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    "stack": "container",
+
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     },
