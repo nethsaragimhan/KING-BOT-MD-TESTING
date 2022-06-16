@@ -3,7 +3,7 @@ const chalk = require('chalk')
 
 
 global.HEROKU_API_KEY = ['1bfdc24f-90b1-4ce5-8e9f-22ca3dcc3a26']
-global.HEROKU_APP_NAME = ['kingbottestwithupcmd']
+global.HEROKU_APP_NAME = ['kingbottestwithupcmd1']
 
 
 let file = require.resolve(__filename)
