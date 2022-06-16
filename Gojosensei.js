@@ -2114,17 +2114,22 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
-                    caption: `
-🇱🇰⃞ Title : ${anu.title}
-🇱🇰⃞ Ext : Search
-🇱🇰⃞ ID : ${anu.videoId}
-🇱🇰⃞ Duration : ${anu.timestamp}
-🇱🇰⃞ Viewes : ${anu.views}
-🔥⃞ Uploaded On : ${anu.ago}
-🔥⃞ Author : ${anu.author.name}
-💦⃞ Channel : ${anu.author.url}
-💦⃞ Url : ${anu.url}`,
-                    footer: GojoMdNx.user.name,
+                    caption: `*╭─────────────────╮*
+*│      🔥 ᴋɪɴɢ ʙᴏᴛ - ᴍᴅ ᴠᴇʀꜱɪᴏɴ   🔥    │*
+*╰─────────────────╯*
+
+          *📥 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 📥*
+   
+💠 Title : ${anu.title}
+💠 Ext : Search
+💠 ID : ${anu.videoId}
+💠 Duration : ${anu.timestamp}
+💠 Viewes : ${anu.views}
+💠 Uploaded On : ${anu.ago}
+💠 Author : ${anu.author.name}
+💠 Channel : ${anu.author.url}
+💠 Url : ${anu.url}`,
+                    footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -2179,13 +2184,22 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
-                    caption: `
-🇱🇰⃞ Title : ${anu.title}
-🇱🇰⃞ Duration : ${anu.timestamp}
-🇱🇰⃞ Viewes : ${anu.views}
-🔥⃞ Uploaded On : ${anu.ago}
-🔥⃞ Url : ${anu.url}`,
-                    footer: GojoMdNx.user.name,
+                    caption: `╭─────────────────╮*
+*│      🔥 ᴋɪɴɢ ʙᴏᴛ - ᴍᴅ ᴠᴇʀꜱɪᴏɴ   🔥    │*
+*╰─────────────────╯*
+
+         *📥 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 📥*
+          
+💠 Title : ${anu.title}
+💠 Ext : Search
+💠 ID : ${anu.videoId}
+💠 Duration : ${anu.timestamp}
+💠 Viewes : ${anu.views}
+💠 Uploaded On : ${anu.ago}
+💠 Author : ${anu.author.name}
+💠 Channel : ${anu.author.url}
+💠 Url : ${anu.url}`,
+                    footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -3362,19 +3376,19 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/logo.jpeg')},
                             hydratedFooterText: `┌─❖
-│「 Hi 👋 」
-└┬❖ 「 ${pushname} 」
+│「 Hi 👋  ${pushname} 」
+└┬❖  [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]
 ┌┤✑  ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴡʜɪᴛᴇ ʜᴀᴄᴋᴇʀꜱ
 │└─────────────────
-│ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│        *「 BOT INFO 」*
+│🎲 SPEED : ${latensie.toFixed(4)} miliseconds
+│🎲 RUNTIME : ${runtime(process.uptime())}
+│🎭 BOT NAME : ${global.botname}
+│🎭 OWNER NAME : ${global.ownername}
+│🎭 OWNER NUMBER : ${global.owner}
+│🔥 HOST NAME : ${os.hostname()}
+│🔥 PLATFORM : ${os.platform()}
+│🔥 TOTAL USERS : ${Object.keys(global.db.data.users).length}
 └─────────────────`,
                             hydratedButtons: [{
                                 urlButton: {
@@ -3398,7 +3412,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: '🇱🇰⃞ OWNER 🇱🇰⃞',
+                                    displayText: '🇱🇰 OWNER 🇱🇰',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3435,39 +3449,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 🔰 ᴜᴄʜɪᴛʜᴀ
   
 
-🍁 *Github* *➛* https://github.com/KING-BOT-OFFICIAL/KING-BOT
-
-🍁 *Youtube Channel* *➛* https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw
-
-🍁 *Bot Group* *➛* https://chat.whatsapp.com/FxRkE50toG4KtC8p9703PY
-
-🍁 *Whatsapp* *➛* https://wa.me/94729352830
-
-🍁 *Support Group* *➛* https://t.me/kingwabotsupport
-
-
       *🔰 ꜰᴏʀ 24/7 ʜᴇʟᴘ ᴍꜱɢ ᴍᴇ 🔰*
   
-*🔥 𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐟𝐨𝐫 𝐜𝐡𝐨𝐨𝐬𝐢𝐧𝐠 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥*
-
-
-┌─❖
-│「 Hi 👋  ${pushname}」
-└┬❖ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]
-┌┤✑  ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴡʜɪᴛᴇ ʜᴀᴄᴋᴇʀꜱ
-│└───────────────┈ ⳹
-│ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-  │✑  Please Select The Button Below
-  └───────────────┈ ⳹`,
+*🔥 𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐟𝐨𝐫 𝐜𝐡𝐨𝐨𝐬𝐢𝐧𝐠 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥*`,
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: '🔥YouTube🔥',
