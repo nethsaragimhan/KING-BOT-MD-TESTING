@@ -2128,6 +2128,7 @@ break
 💠 Uploaded On : ${anu.ago}
 💠 Author : ${anu.author.name}
 💠 Channel : ${anu.author.url}
+💠 Description : ${anu.description}
 💠 Url : ${anu.url}`,
                     footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     buttons: buttons,
@@ -2202,6 +2203,7 @@ break
 💠 Uploaded On : ${anu.ago}
 💠 Author : ${anu.author.name}
 💠 Channel : ${anu.author.url}
+💠 Description : ${anu.description}
 💠 Url : ${anu.url}`,
                     footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     buttons: buttons,
@@ -3677,7 +3679,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `*Hi Bro ${m.pushName}*\nDonation section is currently down🥲 , I know you are happy but me 🥲💔\n` }, { quoted: m })
             }
             break
-            case 'sc': case 'git' case 'script': {
+            case 'sc': case 'git': case 'script': {
                 reply(``*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS*
 *❑ Contact Owner : https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER...😋࿐*
 
