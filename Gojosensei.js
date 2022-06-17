@@ -3680,14 +3680,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'sc': case 'git': case 'script': {
-                reply(``*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS*
-*❑ Contact Owner : https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER...😋࿐*
-
-*❑ Github link → https://github.com/KING-BOT-OFFICIAL/KING-BOT*
-
-*❑ My channel link : https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw* 
-
-*🔰 For More Updates Subscribe The Channel 🔰*`)
+                reply('*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS*\n\n*❑ Contact Owner : https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER...😋࿐*\n*❑ Github link → https://github.com/KING-BOT-OFFICIAL/KING-BOT*\n*❑ My channel link : https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw* \n\n*🔰 For More Updates Subscribe The Channel 🔰*')
             }
             break
 case 'allmenu': {
