@@ -1371,6 +1371,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		replay('```kicked out in the the group!```')
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
@@ -2143,8 +2144,8 @@ break
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 GojoMdNx.sendImage(m.chat, media.thumb, `️🇱🇰⃞ Title : ${media.title}\n🇱🇰⃞ File Size : ${media.filesizeF}\n🇱🇰⃞ Url : ${isUrl(text)}\n🇱🇰⃞ Ext : MP3\n🇱🇰⃞ Resolution : ${args[1] || '128kbps'}`, m)
-                reply(`👋Hello ${m.pushName}\n𝐊𝐈𝐍𝐆 𝐁𝐎𝐓 𝙸𝚂 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚂𝙾𝙽𝙶⇨🎲`)
-                reply(`👋Hello ${m.pushName}\n𝐊𝐈𝐍𝐆 𝐁𝐎𝐓 𝙸𝚂 𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚂𝙾𝙽𝙶⇨🎲`)
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Searching your song*_ ✨➾🔎`)
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Uploading your song*_ ✨➾🔎`)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2154,6 +2155,8 @@ break
                 let quality = args[1] ? args[1] : '240p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Searching your video*_ ✨➾🔎`)
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Uploading your video*_ ✨➾🔎`)
                 GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🇱🇰⃞ Title : ${media.title}\n🇱🇰⃞ File Size : ${media.filesizeF}\n🇱🇰⃞ Url : ${isUrl(text)}\n🇱🇰⃞ Ext : MP3\n🇱🇰⃞ Resolution : ${args[1] || '240p'}` }, { quoted: m })
             }
             break
@@ -2164,8 +2167,8 @@ break
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 GojoMdNx.sendImage(m.chat, media.thumb, `🇱🇰⃞ Title : ${media.title}\n🇱🇰⃞ File Size : ${media.filesizeF}\n🇱🇰⃞ Url : ${isUrl(text)}\n🇱🇰⃞ Ext : MP3\n🇱🇰⃞ Resolution : ${args[1] || '320kbps'}`, m)
-                reply(`👋Hello ${m.pushName}\n𝐊𝐈𝐍𝐆 𝐁𝐎𝐓 𝙸𝚂 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚂𝙾𝙽𝙶⇨🎲`)
-                reply(`👋Hello ${m.pushName}\n𝐊𝐈𝐍𝐆 𝐁𝐎𝐓 𝙸𝚂 𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚂𝙾𝙽𝙶⇨🎲`)
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Searching your song*_ ✨➾🔎`)
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Uploading your song*_ ✨➾🔎`)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2175,6 +2178,8 @@ break
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Searching your video*_ ✨➾🔎`)
+                GojoMdNx.sendMessage(`👋Hello ${m.pushName}\n_*I'm Uploading your video*_ ✨➾🔎`)
                 GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🇱🇰⃞ Title : ${media.title}\n🇱🇰⃞ File Size : ${media.filesizeF}\n🇱🇰⃞ Url : ${isUrl(text)}\n Ext : MP3\n🇱🇰⃞ Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
@@ -3334,7 +3339,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'owner': case 'creator': {
-                GojoMdNx.sendContact(m.chat, '+94729352830', m)
+                GojoMdNx.sendContact(m.chat, global.ownernomer, m)
             }
             break
 case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
@@ -3374,18 +3379,11 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                      case 'alive':{
                            	timestampe = speed();
 latensie = speed() - timestampe
- anu = ` `
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/logo.jpeg')},
-                            hydratedFooterText: `┌─❖
-│「 Hi 👋  ${pushname} 」
-└┬❖  [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]
-┌┤✑  ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴡʜɪᴛᴇ ʜᴀᴄᴋᴇʀꜱ
-│└─────────────────
+ anu = `┌────────────────❖
+│💠「 Hi 👋  ${pushname} 」
+│💠  [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥
+│💠 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴡʜɪᴛᴇ ʜᴀᴄᴋᴇʀꜱ
+├────────────────❖
 │        *「 BOT INFO 」*
 │🎲 SPEED : ${latensie.toFixed(4)} miliseconds
 │🎲 RUNTIME : ${runtime(process.uptime())}
@@ -3395,7 +3393,14 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 │🔥 HOST NAME : ${os.hostname()}
 │🔥 PLATFORM : ${os.platform()}
 │🔥 TOTAL USERS : ${Object.keys(global.db.data.users).length}
-└─────────────────`,
+└────────────────❖ `
+const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            hydratedContentText: anu,
+                            locationMessage: {
+                            jpegThumbnail: fs.readFileSync('./GojoMedia/logo.jpeg')},
+                            hydratedFooterText: `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`,
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: '🔥 YOUTUBE 🔥',
@@ -3431,33 +3436,14 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                      case 'bot':{
                            	timestampe = speed();
 latensie = speed() - timestampe
- anu = ` `
+ anu = `╹🔥 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] *𝚂𝚁𝙸 𝙻𝙰𝙽𝙺𝙰 𝙱𝙴𝚂𝚃 𝚆.𝙰 𝙱𝙾𝚃* 🔥╹\n🎲 𝐎𝐰𝐧𝐞𝐫 & 𝐅𝐨𝐮𝐧𝐝𝐞𝐫 - ᏔᎻᏆͲᎬ ᎻᎪᏟᏦᎬᎡՏ\n🎲 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞 - ΝϴᎠᎬ.ᎫՏ\n\n           *🍒 ᴀᴅᴍɪɴ ™🍒*\n\n🔰 ᴀᴄʜɪ ғᴇʀɴᴀɴᴅᴏ\n🔰 ᴍʀ ɴɪᴍᴀ\n🔰 ᴘʀᴀᴠᴇᴇɴ ᴊᴀʏᴀʟᴀᴛʜ\n🔰 ɪɴᴜᴋᴀ\n🔰 ᴜᴄʜɪᴛʜᴀ\n\n\n         *🔰 ꜰᴏʀ 24/7 ʜᴇʟᴘ ᴍꜱɢ ᴍᴇ 🔰*\n\n  *🔥 𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐟𝐨𝐫 𝐜𝐡𝐨𝐨𝐬𝐢𝐧𝐠 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥*` `
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/logo.jpeg')},
-                            hydratedFooterText: `╹🔥 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] *𝚂𝚁𝙸 𝙻𝙰𝙽𝙺𝙰 𝙱𝙴𝚂𝚃 𝚆.𝙰 𝙱𝙾𝚃* 🔥╹ 
-
-
-🔴 𝐎𝐰𝐧𝐞𝐫 & 𝐅𝐨𝐮𝐧𝐝𝐞𝐫 - ᏔᎻᏆͲᎬ ᎻᎪᏟᏦᎬᎡՏ
-
-🔴 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞 - ΝϴᎠᎬ.ᎫՏ
-
-
-           *🍒 ᴀᴅᴍɪɴ ™🍒*
-
-🔰 ᴀᴄʜɪ ғᴇʀɴᴀɴᴅᴏ
-🔰 ᴍʀ ɴɪᴍᴀ
-🔰 ᴘʀᴀᴠᴇᴇɴ ᴊᴀʏᴀʟᴀᴛʜ
-🔰 ɪɴᴜᴋᴀ
-🔰 ᴜᴄʜɪᴛʜᴀ
-  
-
-      *🔰 ꜰᴏʀ 24/7 ʜᴇʟᴘ ᴍꜱɢ ᴍᴇ 🔰*
-  
-*🔥 𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐟𝐨𝐫 𝐜𝐡𝐨𝐨𝐬𝐢𝐧𝐠 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥*`,
+                            hydratedFooterText: `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`,
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: '🔥YouTube🔥',
@@ -3465,7 +3451,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }
                             }, {
                             	urlButton: {
-                                displayText: '🖥 GITHUB️ 🖥️',
+                                displayText: '🔥 GITHUB️ 🔥️',
                                     url: `${sc}`
                                 }
                             }, {
@@ -3480,7 +3466,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: '👤 Owner 👤',
+                                    displayText: '🇱🇰 Owner 🇱🇰',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3500,8 +3486,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/logo.jpeg')}, 
-                            hydratedFooterText: `
-┌─❖
+                            hydratedFooterText: `┌─❖
 │「 Hi 👋  ${pushname}」
 └┬❖ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]
 ┌┤✑  ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴡʜɪᴛᴇ ʜᴀᴄᴋᴇʀꜱ
@@ -3540,7 +3525,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: '🇱🇰⃞ OWNER 🇱🇰⃞',
+                                    displayText: '🇱🇰 OWNER 🇱🇰⃞',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3554,7 +3539,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `ʜɪ ${pushname}`,
-                    description: `ᴘʟᴇᴀꜱᴇ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ᴍᴇɴᴜ\n\n*🎲THIS IS [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] MENU LIST 💥*\n*💹YOU CAN DO LOT OF WORKS WITH ME AND DON'T USE BOT FOR BAD THINKS !🤘*\n`,
+                    description: `🔥ᴘʟᴇᴀꜱᴇ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ᴍᴇɴᴜ🔥\n\n*🎲 THIS IS [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] MENU LIST 💥*\n*💹 YOU CAN DO LOT OF WORKS WITH ME AND DON'T USE BOT FOR BAD THINKS !🤘*\n`,
                     buttonText: "Menu",
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
@@ -3562,14 +3547,14 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Main Features",
 								"rows": [
 									{
-										"title": "Main Menu",
+										"title": "───🔥Main Menu🔥─",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}mainmenu`
 									}
 								]
 							},
 							{
-								"title": "Bot Features",
+								"title": "───🎲Bot Features🎲─",
 								"rows": [
 									{
 										"title": "All Menu",
@@ -3680,7 +3665,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'sc': case 'git': case 'script': {
-                reply('*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS*\n\n*❑ Contact Owner : https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER...😋࿐*\n*❑ Github link → https://github.com/KING-BOT-OFFICIAL/KING-BOT*\n*❑ My channel link : https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw* \n\n*🔰 For More Updates Subscribe The Channel 🔰*')
+                reply('*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS*\n\n*❑ Contact Owner : https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER...*\n*❑ Github link → https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD*\n*❑ My channel link : https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw* \n\n*🔰 For More Updates Subscribe The Channel 🔰*')
             }
             break
 case 'allmenu': {
